@@ -26,14 +26,14 @@
 
                 @foreach($students as $student)
                     <tr>
-                        <td>{{ sloop->interation }}</td>
+                        <td>{{ $student->id }}</td>
                         <td>{{ $student->name }}</td>
                         <td>{{ $student->nim }}</td>
                         <td>{{ $student->major }}</td>
                         <td>{{ $student->class }}</td>
                         <td>
                             <a href="#" class="btn btn-warning">Edit</a>
-                            <a href="#" class="btn btn-warning">Delete</a>
+                            <a href="#" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
                 @endforeach
