@@ -11,11 +11,20 @@
       </li>
       
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="/admin/student">
           <i class="bi bi-backpack2"></i>
           <span>Student</span>
         </a>
-      </li><!-- End Dashboard Nav -->
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="/admin/courses">
+          <i class="bi bi-grid"></i>
+          <span>Courses</span>
+        </a>
+      </li>
+      
+      <!-- End Dashboard Nav -->
 
     </ul>
 
