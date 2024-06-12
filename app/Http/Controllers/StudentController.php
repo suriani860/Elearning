@@ -39,8 +39,8 @@ class StudentController extends Controller
         $request->validate([
         'name' => 'required',
         'nim' => 'required | numeric',
-        'major' => 'required',
         'courses_id' => 'nullable',
+        'major' => 'required',
         'class' => 'required',
         ]);
 
@@ -62,9 +62,11 @@ class StudentController extends Controller
     {
         // cari data student berdasarkan id
         $student = Student::find($id);
+        $courses = Courses::all();
 
         return view('admin.contents.student.edit', [
-            'student' => $student
+            'student' => $student,
+            'courses' => $courses
         ]);
     }
 
@@ -78,6 +80,7 @@ class StudentController extends Controller
          $request->validate([
             'name' => 'required',
             'nim' => 'required | numeric',
+            'courses_id' => 'nullable',
             'major' => 'required',
             'class' => 'required',
             ]);
@@ -87,6 +90,7 @@ class StudentController extends Controller
             'name' => $request->name,
             'nim' => $request->nim,
             'major' => $request->major,
+            'courses_id' => $request->courses_id,
             'class' => $request->class,
             ]);
 
