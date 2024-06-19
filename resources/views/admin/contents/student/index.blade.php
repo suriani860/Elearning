@@ -29,7 +29,7 @@
                     <td>{{ $student->name }}</td>
                     <td>{{ $student->nim }}</td>
                     <td>{{ $student->major }}</td>
-                    <td>{{ $student->courses->name }}</td>
+                    
                     <td>{{ $student->class }}</td>
                     <td class="d-flex">
                         <a href="/admin/student/edit/{{ $student->id }}" class="btn btn-warning me-2">Edit</a>
